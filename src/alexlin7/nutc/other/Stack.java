@@ -3,14 +3,14 @@ package alexlin7.nutc.other;
 import java.util.*;
 
 public class Stack {
-	private Deque elems = new ArrayDeque();
+	private Deque<String> elems = new ArrayDeque<>();
 	private int capacity;
 	
 	public Stack(int capacity) {
 		this.capacity = capacity;
 	}
 	
-	public boolean push (Object elem) {
+	public boolean push (String elem) {
 		if(isFull()) return false;
 		return elems.offerLast(elem);
 	}
@@ -43,6 +43,7 @@ public class Stack {
 		for(int i = 0 ; i < 5; i++) {
 			System.out.println(stack.pop());
 		}
+		console.close();
 
 	}
 

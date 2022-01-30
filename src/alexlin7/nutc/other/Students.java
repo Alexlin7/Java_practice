@@ -48,7 +48,7 @@ class Student {
 public class Students {
 
 	public static void main(String[] args) {
-		HashSet students = new HashSet();
+		HashSet<Student> students = new HashSet<>();
 		students.add(new Student("Justin", "B835031"));
 		students.add(new Student("Monica", "B835032"));
 		students.add(new Student("Justin", "B835031"));
