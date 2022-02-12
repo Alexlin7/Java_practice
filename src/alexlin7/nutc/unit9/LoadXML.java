@@ -9,7 +9,5 @@ public class LoadXML {
         props.loadFromXML(new FileInputStream("resource/person.xml"));
         System.out.println(props.getProperty("Alexlin7.nutc.username"));
         System.out.println(props.getProperty("Alexlin7.nutc.password"));
-
-
     }
 }
