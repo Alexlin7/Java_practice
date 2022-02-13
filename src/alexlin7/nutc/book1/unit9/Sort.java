@@ -1,11 +1,11 @@
-package alexlin7.nutc.unit9;
+package alexlin7.nutc.book1.unit9;
 
 import java.util.*;
 
 class Account implements Comparable<Account> {
-	private String name;
-	private String number;
-	private int balance;
+	private final String name;
+	private final String number;
+	private final int balance;
 
 	Account(String name, String number, int balance) {
 		this.name = name;

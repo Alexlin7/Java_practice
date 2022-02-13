@@ -1,4 +1,4 @@
-package alexlin7.nutc.unit9;
+package alexlin7.nutc.book1.unit9;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ class Main {
 
   static void printUpperCase(ArrayList<String> names) {
     for(int i = 0; i < names.size(); i++) {
-      String name = (String) names.get(i);
+      String name = names.get(i);
       System.out.println(name.toUpperCase());
     }
   }
