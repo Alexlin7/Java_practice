@@ -5,18 +5,17 @@ import java.util.Scanner;
 public class Fraction {
 
 	public static void main(String[] args) {
-		
-		Scanner keyin = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		String[] input = new String[2];
 		String[][] spiltString = new String[2][2];
 		int[][] a = new int[2][2];
 		int x, y, z, z2, z3;
-		
+
 		for(int i = 0; i < input.length; i++) {
 			System.out.print("請輸入第" + (i + 1) + "個分數:");
-			input[i] = keyin.nextLine();
+			input[i] = sc.nextLine();
 		}
-		keyin.close();
+		sc.close();
 		
 		for(int i = 0 ; i < input.length; i++) {
 			spiltString[i] = input[i].split("/");

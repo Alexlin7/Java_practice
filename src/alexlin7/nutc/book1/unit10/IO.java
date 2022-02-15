@@ -12,8 +12,9 @@ public class IO {
         //so we can use try-with-resources .
         try(src; dest) {
             byte[] data = new byte[1024];
-            while((src.read(data)) != -1) {
-                dest.write(data, 0, 0);
+            int length;
+            while((length = (src.read(data)) )!= -1) {
+                dest.write(data, 0, length);
             }
         }
     }

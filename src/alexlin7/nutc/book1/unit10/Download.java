@@ -8,6 +8,7 @@ public class Download {
         URL url = new URL(args[0]);
         var src = url.openStream();
         var dest = new FileOutputStream(args[1]);
-        IO.dump(src, dest);
+        //IO.dump(src, dest);
+        BufferedIO.dump(src, dest);
     }
 }
