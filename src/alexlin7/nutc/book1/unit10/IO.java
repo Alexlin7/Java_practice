@@ -8,7 +8,7 @@ public class IO {
     public static void dump(InputStream src, OutputStream dest)
             throws IOException {
 
-        //InputStream and OutputStream extend java.lang.AutoCloseable,
+        //InputStream and OutputStream extend from java.lang.AutoCloseable,
         //so we can use try-with-resources .
         try(src; dest) {
             byte[] data = new byte[1024];

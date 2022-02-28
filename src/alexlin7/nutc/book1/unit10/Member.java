@@ -20,7 +20,7 @@ public class Member {
 
     public void save() throws IOException {
         try(var output = new DataOutputStream(
-                new FileOutputStream("resource/" + number + ".txt"))){
+                new FileOutputStream("dest/" + number + ".txt"))){
             output.writeUTF(number);
             output.writeUTF(name);
             output.writeInt(age);
@@ -30,7 +30,7 @@ public class Member {
     public static Member load(String number) throws IOException{
 
         try(var input = new DataInputStream(
-                new FileInputStream("resource/" + number + ".txt"))){
+                new FileInputStream("dest/" + number + ".txt"))){
 
             return new Member(
                     input.readUTF(), input.readUTF(), input.readInt()

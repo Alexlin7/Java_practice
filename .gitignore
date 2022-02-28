@@ -17,4 +17,4 @@ gen/
 .DS_Store
 .idea
 
-resource/
+dest/

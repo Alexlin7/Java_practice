@@ -20,7 +20,7 @@ public class Member2 {
 
     public void save() throws IOException {
         try(var output = new ObjectOutputStream(
-                new FileOutputStream("resource/" + number + ".txt"))){
+                new FileOutputStream("dest/" + number + ".txt"))){
             output.writeObject(this);
         }
     }
@@ -29,7 +29,7 @@ public class Member2 {
             throws IOException, ClassNotFoundException{
 
         try(var input = new ObjectInputStream(
-                new FileInputStream("resource/" + number + ".txt"))){
+                new FileInputStream("dest/" + number + ".txt"))){
 
             return (Member2) input.readObject();
 
