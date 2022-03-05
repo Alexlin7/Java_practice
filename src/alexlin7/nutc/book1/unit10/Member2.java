@@ -3,24 +3,24 @@ package alexlin7.nutc.book1.unit10;
 import java.io.*;
 
 public class Member2 {
-    private final String number;
-    private final String name;
-    private final int age;
+    private final String NUMBER;
+    private final String NAME;
+    private final int AGE;
 
-    public Member2(String number, String name, int age) {
-        this.number = number;
-        this.name = name;
-        this.age = age;
+    public Member2(String number, String NAME, int AGE) {
+        this.NUMBER = number;
+        this.NAME = NAME;
+        this.AGE = AGE;
     }
 
     @Override
     public String toString() {
-        return String.format("(%s, %s, %d)", number, name, age);
+        return String.format("(%s, %s, %d)", NUMBER, NAME, AGE);
     }
 
     public void save() throws IOException {
         try(var output = new ObjectOutputStream(
-                new FileOutputStream("dest/" + number + ".txt"))){
+                new FileOutputStream("dest/" + NUMBER + ".txt"))){
             output.writeObject(this);
         }
     }
