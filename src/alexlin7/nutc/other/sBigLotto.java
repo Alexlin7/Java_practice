@@ -9,13 +9,13 @@ public class sBigLotto {
 		int nums = 7;
 		sBigLotto c1 = new sBigLotto();
 		
-		getRndSatic(lotto, start, end, nums);
+		getRndStatic(lotto, start, end, nums);
 		c1.getRnd(lotto, start, end, nums);
 
 	}
 	
-	public static void getRndSatic(int[] args, int start, int end, int nums) {
-		int[] rand = new int[49];
+	public static void getRndStatic(int[] args, int start, int end, int nums) {
+		int[] rand = args;
 		int indexR;
 		int temp;
 		for(int i = 0;i < rand.length; i++) {
