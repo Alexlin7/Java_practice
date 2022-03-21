@@ -1,4 +1,4 @@
-package alexlin7.nutc.book1.unit11.Demo;
+package alexlin7.nutc.book1.unit11.demo;
 
 public class Clerk {
     private int product = -1;
