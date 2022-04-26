@@ -13,22 +13,49 @@ public class EmployeeDemo {
                 new Employee("Monica", 15, Gender.FEMALE)
         );
 
+        // not use reduce
+//        var sum = employees.stream()
+//                .filter(employee -> employee.getGender() == Gender.MALE)
+//                .mapToInt(Employee::getAge)
+//                .sum();
+//
+//        var avg = employees.stream()
+//                .filter(employee -> employee.getGender() == Gender.MALE)
+//                .mapToInt(Employee::getAge)
+//                .average();
+//
+//        var max = employees.stream()
+//                .filter(employee -> employee.getGender() == Gender.MALE)
+//                .mapToInt(Employee::getAge)
+//                .max()
+//                .getAsInt();
+//        List.of(sum, avg, max).forEach(System.out::println);
+
+
+        //use reduce
         var sum = employees.stream()
                 .filter(employee -> employee.getGender() == Gender.MALE)
                 .mapToInt(Employee::getAge)
-                .sum();
+                .reduce(Integer::sum)
+                .getAsInt();
+
+        var males = employees.stream()
+                .filter(employee -> employee.getGender() == Gender.MALE)
+                .count();
 
         var avg = employees.stream()
                 .filter(employee -> employee.getGender() == Gender.MALE)
                 .mapToInt(Employee::getAge)
-                .average();
+                .reduce(Integer::sum)
+                .getAsInt() / males;
 
         var max = employees.stream()
                 .filter(employee -> employee.getGender() == Gender.MALE)
                 .mapToInt(Employee::getAge)
-                .max()
-                .getAsInt();
+                .reduce(0, (currMax, age) -> Math.max(age, currMax));
+
         List.of(sum, avg, max).forEach(System.out::println);
+
     }
 
 }
