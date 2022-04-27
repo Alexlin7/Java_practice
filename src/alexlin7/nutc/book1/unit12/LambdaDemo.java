@@ -10,7 +10,7 @@ public class LambdaDemo {
                 Comparator.comparingInt(String::length));
         System.out.println(Arrays.toString(names));
 /*
-        由於是比較長度 所以可以直接參考Comparator下的comparingInt
+        由於是比較長度 所以可以引入Comparator下的comparingInt 然後丟String的參考方法
         Arrays.sort(names,
                 (name1, name2) -> name1.length() - name2.length());
         System.out.println(Arrays.toString(names));
