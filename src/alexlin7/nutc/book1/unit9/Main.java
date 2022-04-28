@@ -5,9 +5,12 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     ArrayList<String> names = new ArrayList<>();
+
     collectNameTo(names);
     System.out.println("訪客名單: ");
     printUpperCase(names);
+    System.out.println("==============");
+    names.foreach(System.out::println);
   }
 
   static void collectNameTo(ArrayList<String> names) {
