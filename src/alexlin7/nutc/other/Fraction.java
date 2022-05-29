@@ -12,7 +12,7 @@ public class Fraction {
 		int x, y, z, z2, z3;
 
 		for(int i = 0; i < input.length; i++) {
-			System.out.print("請輸入第" + (i + 1) + "個分數:");
+			System.out.print("請輸入第" + (i + 1) + "個分數(ex:3/2) :");
 			input[i] = sc.nextLine();
 		}
 		sc.close();
