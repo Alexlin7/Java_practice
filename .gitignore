@@ -16,5 +16,5 @@ gen/
 .project  
 .DS_Store
 .idea
-
+.properties
 dest/
